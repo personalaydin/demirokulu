@@ -1,0 +1,53 @@
+// Magnific Popup
+.mfp-popup {
+    position: relative;
+    background: #FFF;
+    padding: 20px;
+    width: auto;
+    margin: 20px auto;
+
+    &--xs {
+        max-width: 500px;
+    }
+
+    &--sm {
+        max-width: 700px;
+    }
+
+    &--md {
+        max-width: 900px;
+    }
+
+    &--lg {
+        max-width: 1100px;
+    }
+}
+
+.mfp-close {
+    border-radius: 50%;
+    width: 44px !important;
+    height: 44px !important;
+    color: $colorMain !important;
+    padding-right: 0 !important;
+    text-align: center !important;
+    top: -22px !important;
+    right: -22px !important;
+    background: #fff !important;
+    opacity: 1 !important;
+    box-shadow: 2px 2px 10px rgba(#010101, .3) !important;
+    transition: all .3s;
+
+    &:hover {
+        background: $colorMain !important;
+        color: #fff !important;
+    }
+
+    &:focus {
+        outline: none !important;
+    }
+
+    @include media-breakpoint-down(md) {
+        top: -50px !important;
+        right: 0 !important;
+    }
+}

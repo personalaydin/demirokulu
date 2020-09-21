@@ -1,0 +1,57 @@
+.vertical-divider {
+    width: 1px;
+    height: 100%;
+}
+
+@each $color, $value in $theme-colors {
+    .vertical-divider--#{$color} {
+        background-color: $value;
+    }
+}
+
+.vertical-divider--blue-400--opacity {
+    opacity: .2;
+}
+
+.vertical-divider--services {
+    width: 2px;
+    height: 38px;
+}
+
+.vertical-divider--slider-1 {
+    height: 33px;
+    width: 1px;
+}
+
+.vertical-divider--slider-2 {
+    height: 45px;
+    width: 5px;
+}
+
+.vertical-divider--footer-social {
+    width: 1px;
+    height: 31px;
+}
+
+.vertical-divider--special {
+    position: relative;
+    width: 1px;
+    height: 100%;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3px;
+        height: 31px;
+        background: $colorMain;
+    }
+}
+
+.vertical-divider--center {
+    position: relative;
+    top: 0;
+    left: 50%;
+}

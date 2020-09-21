@@ -1,0 +1,79 @@
+.h-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+}
+
+.h-button__no-transition {
+    transition: none;
+}
+
+.h-button__news-slider {
+    border: 1px solid $colorBlue300;
+    color: $colorBlue300;
+
+    &:hover, &:focus {
+        background: $colorMain;
+        border-color: $colorMain;
+        color: #fff;
+    }
+}
+
+.h-button__next-prev {
+    position: relative;
+    background: url('../../img/button-services.png') -10px -162px;
+    color: #fff;
+    height: 75px;
+
+    @include media-breakpoint-up(sm) {
+        height: 100px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        height: 132px;
+    }
+
+    &:hover {
+        background: url('../../img/button-services.png') -10px -10px;
+        color: #fff;
+    }
+}
+
+.h-button__services-inspect {
+    width: 85px;
+    height: 25px;
+    background: $colorMain;
+
+    &:hover, &:focus {
+        background: $colorBlue900;
+        color: #fff;
+    }
+}
+
+.h-button-commvault {
+    width: 100%;
+    background: #88939f;
+    transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+
+    @include media-breakpoint-up(lg) {
+        width: calc(50% - 25px);
+    }
+
+    &:hover {
+        background: $colorMain;
+    }
+}
+
+.h-button__error-page {
+    background: $contactAddress4;
+    border: 2px solid $contactAddress4;
+    color: #fff;
+    height: 50px;
+
+    &:hover {
+        background: transparent;
+        color: $contactAddress4;
+    }
+}

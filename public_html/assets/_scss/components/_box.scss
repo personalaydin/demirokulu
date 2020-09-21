@@ -1,0 +1,17 @@
+.box {}
+
+.box-services {
+    width: calc(50% - 5px);
+    margin: 2.5px;
+
+    @include media-breakpoint-up(lg) {
+        width: 100%;
+        margin-right: 5px;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

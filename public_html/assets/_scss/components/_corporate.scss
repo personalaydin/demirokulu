@@ -1,0 +1,39 @@
+
+
+    .arrow-icon{
+        position: relative;
+        top: 50px;
+        left: 40%;
+        max-width: 50%;
+        width: 20%;
+            @media (max-width:991px){
+                width: 20%;
+                position: relative;
+                left: 40%;
+                top: 80px;
+                
+                }
+                @media (max-width:600px){
+                    width: 14%;
+                    position: relative;
+                    left:46%;
+                    top: 100px;
+                }
+                @media (max-width:400px){
+                        width: 20%;
+                        position: relative;
+                        left:43%;
+                        top: 110px;
+                }
+
+    
+
+    }
+
+    .btn-none{
+        @media (max-width:991px){
+            display:none !important;
+        }
+    }
+
+ 

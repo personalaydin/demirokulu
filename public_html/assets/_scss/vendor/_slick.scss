@@ -1,0 +1,123 @@
+:root {
+    --dotsSize: 20px;
+}
+
+.slick-carousel-pagination {
+
+    button {
+        background: transparent;
+    }
+
+    .custom-slick-prev,
+    .custom-slick-next {
+        color: $gray600;
+        transition: all .3s;
+
+        &:hover {
+            color: $colorMain;
+        }
+    }
+}
+
+.slick-custom-pagination {
+
+    @include media-breakpoint-up(xl) {
+        position: absolute;
+        top: 50%;
+        left: -100px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        left: -150px;
+    }
+}
+
+.slick-progressbar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: $progressbar-height;
+    background: $colorMain;
+}
+
+.slick-position {
+    position: relative;
+    bottom: -7px;
+}
+
+.slick-carousel--full-height {
+
+    .slick-list {
+        height: 100%;
+
+        .slick-track {
+            height: 100%;
+
+            .slick-slide {
+                height: 100%;
+
+                > div {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+.slick--overflow-full-width {
+    width: 100vw;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @include media-breakpoint-up(lg) {
+        padding: 1rem 0;
+    }
+
+    li {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba($colorBlue400, .1);
+        width: var(--dotsSize);
+        height: var(--dotsSize);
+        margin: 0 5px;
+        border-radius: 50%;
+
+        @include media-breakpoint-up(lg) {
+            margin: 0 10px;
+        }
+    }
+
+    button {
+        display: block;
+        width: calc(var(--dotsSize) / 2);
+        height: calc(var(--dotsSize) / 2);
+        padding: 0;
+        border: none;
+        border-radius: 100%;
+        background-color: #0c376e;
+        text-indent: -9999px;
+        transition: all .2s;
+
+        &:hover {
+            background: $colorMain;
+        }
+    }
+
+    li.slick-active button {
+        background-color: $colorMain;
+    }
+}

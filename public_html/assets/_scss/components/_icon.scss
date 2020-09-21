@@ -1,0 +1,176 @@
+.icon {}
+
+.icon__logo {
+
+    svg {
+        width: 66px;
+        height: 30px;
+
+        .no-text-1 {
+            fill: #0971ce;
+        }
+    }
+}
+
+.icon__commvault {
+
+    svg {
+        fill: #b7bec6;
+        width: 200px;
+        height: 37px;
+
+        @include media-breakpoint-up(md) {
+            width: 291px;
+            height: 47px;
+        }
+    }
+}
+
+.icon-data-reduction {
+
+    svg {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.icon-production-system {
+
+    svg {
+        width: 55px;
+        height: 50px;
+    }
+}
+
+.icon-scale-capacity {
+
+    svg {
+        width: 35px;
+        height: 50px;
+    }
+}
+
+.icon-services {
+
+    svg {
+        fill: #374b5c;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.icon__teyp-system {
+
+    svg {
+        fill: #374b5c;
+        width: 40px;
+        height: 50px;
+    }
+}
+
+.icon__data-center {
+
+    svg {
+        fill: #374b5b;
+        width: 68px;
+        height: 68px;
+    }
+}
+
+.icon__management-services {
+
+    svg {
+        fill: #374b5b;
+        width: 59px;
+        height: 59px;
+    }
+}
+
+.icon__backup-recovery {
+
+    svg {
+        fill: #374b5b;
+        width: 59px;
+        height: 64px;
+    }
+}
+
+.icon__data-storage {
+
+    svg {
+        fill: #374b5b;
+        width: 66px;
+        height: 58px;
+    }
+}
+
+.icon__professional-services {
+
+    svg {
+        fill: #374b5b;
+        width: 66px;
+        height: 51px;
+    }
+}
+
+.icon__service-play {
+
+    svg {
+        width: 50px;
+        height: 50px;
+        transform: scale(1);
+        transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+
+        .play-1 {
+            fill: #fb5100;
+        }
+
+        .play-2, .play-3 {
+            fill: none;
+            stroke: #d3d2e2;
+            stroke-miterlimit: 10;
+        }
+
+        .play-2 {
+            stroke-width: 6px;
+        }
+
+        .play-3 {
+            stroke-width: 4px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    &:hover {
+
+        svg {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.icon__manageable-services {
+
+    svg {
+        fill: #374b5c;
+        width: 50px;
+        height: 50px;
+
+        @include media-breakpoint-up(lg) {
+            width: 93px;
+            height: 79px;
+        }
+    }
+}
+
+.icon__contact {
+
+    img {
+        width: 90px;
+        height: 125px;
+    }
+}

@@ -1,0 +1,68 @@
+.main-slider {}
+
+.main-slider__item {
+    height: calc(var(--vh) * 90);
+
+    @include media-breakpoint-up(lg) {
+        padding-top: var(--headerBottomHeight);
+    }
+}
+
+.main-slider__item--1 {
+    background-image: url('../../img/slider/1.jpg');
+}
+
+.main-slider__item--2 {
+    background-image: url('../../img/slider/2.jpg');
+}
+
+.main-slider__item--3 {
+    background-image: url('../../img/slider/corporate-bg.png');
+}
+
+.main-slider__item--4 {
+    background-image: url('../../img/slider/4.jpg');
+}
+
+.main-slider__item__triangle {
+
+    svg {
+        fill: $colorBlue400;
+        width: 26px;
+        height: 40px;
+        transform: rotate(180deg);
+    }
+}
+
+.main-slider__item__commvault {
+
+    svg {
+        fill: #fff;
+        width: 100px;
+        height: 30px;
+
+        @include media-breakpoint-up(sm) {
+            width: 150px;
+        }
+    }
+}
+
+.main-slider__item__logo {
+
+    svg {
+        width: 76px;
+        height: 23px;
+
+        @include media-breakpoint-up(sm) {
+            width: 116px;
+        }
+    }
+
+    .logo-1 {
+        fill: #fff;
+    }
+
+    .logo-2 {
+        fill: #fff;
+    }
+}

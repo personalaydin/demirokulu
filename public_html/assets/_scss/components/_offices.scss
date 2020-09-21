@@ -1,0 +1,28 @@
+.offices {
+    $borderSize: 1px;
+
+    margin-left: $borderSize;
+
+    .office {
+        border: $borderSize solid #d1d6df;
+        margin-left: $borderSize * -1;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: $borderSize * -1;
+        }
+
+        &:nth-child(odd) {
+            background: #f1f7fc;
+        }
+
+        .office__phone,
+        .office__fax {
+
+            svg {
+                fill: $colorMain;
+                width: 27px;
+                height: 27px;
+            }
+        }
+    }
+}

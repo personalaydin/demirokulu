@@ -1,0 +1,113 @@
+.reference {}
+
+.reference__item {
+    transition: all .3s;
+    //border-bottom: 1px solid $gray800;
+
+    &:hover {
+
+        @include media-breakpoint-up(lg) {
+            background: #fff;
+            box-shadow: 0 0 30px 0 rgba(1, 13, 38, 0.15);
+        }
+    }
+}
+
+.reference__item--no-border {
+    border: 0 !important;
+}
+
+.reference__grid {
+
+    &__item {
+        border-right: 1px solid #dde0e7;
+        border-top: 1px solid #dde0e7;
+        height: 195px;
+
+        @include media-breakpoint-down(lg) {
+            height: 130px;
+
+            img {
+                max-width: 80px;
+                max-height: 50px;
+            }
+        }
+
+        // LG Screens
+        @include media-breakpoint-up(xxl) {
+            width: 20%;
+
+            // First 5 element remove top border
+            &:nth-child(-n+5) {
+                border-top: none;
+            }
+
+            // Remove right border
+            &:nth-child(5n) {
+                border-right: none;
+            }
+        }
+
+        // Medium Screens
+        @include media-breakpoint-between(lg, xl) {
+            width: 25%;
+
+            // First 4 element remove top border
+            &:nth-child(-n+4) {
+                border-top: none;
+            }
+
+            // Remove right border
+            &:nth-child(4n) {
+                border-right: none;
+            }
+        }
+
+        // Small Screens
+        @include media-breakpoint-between(md, lg) {
+            width: 25%;
+
+            // First 4 element remove top border
+            &:nth-child(-n+4) {
+                border-top: none;
+            }
+
+            // Remove right border
+            &:nth-child(4n) {
+                border-right: none;
+            }
+        }
+
+        // XSmall Screens
+        @include media-breakpoint-down(sm) {
+            width: 33%;
+
+            // First 3 element remove top border
+            &:nth-child(-n+3) {
+                border-top: none;
+            }
+
+            // Remove right border
+            &:nth-child(3n) {
+                border-right: none;
+            }
+
+            // Remove last 4 items
+            &:nth-last-child(-n+4) {
+                display: none;
+            }
+        }
+
+        img {
+            filter: grayscale(100%);
+            transition: filter .3s;
+        }
+
+        &:hover {
+
+            img {
+                filter: grayscale(0);
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.excerpt {
+
+    h2 {
+        font-weight: 500;
+        @extend .font-size-17;
+        @extend .font-size-lg-20;
+        @extend .font-size-xl-24;
+        @extend .font-size-xxxl-28;
+        @extend .mb-3;
+    }
+}

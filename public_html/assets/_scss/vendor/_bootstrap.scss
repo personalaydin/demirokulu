@@ -1,0 +1,50 @@
+// Bootstrap Custom Control Each
+@each $color, $value in $theme-colors {
+    .custom-control--#{$color} {
+
+        .custom-control-input {
+
+            &:checked {
+
+                ~ .custom-control-label {
+
+                    &:before {
+                        background: $value !important;
+                        border-color: $value !important;
+                    }
+                }
+            }
+        }
+
+        .custom-control-label {
+
+            &:before {
+                background: $value !important;
+                border-color: $value !important;
+            }
+        }
+    }
+}
+
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: transparent;
+}
+
+label {
+    color: $mainColor !important;
+    font-weight: 500;
+}
+
+.dropdown-menu {
+    min-width: initial;
+}
+
+.dropdown-item {
+    text-align: center;
+    transition: all .1s;
+
+    &:hover {
+        background: $colorMain;
+        color: #fff;
+    }
+}

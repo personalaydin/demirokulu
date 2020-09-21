@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Sitemap: https://demirokulu.com.tr/sitemap.xml
+Sitemap: https://demirokulu.com.tr/en/sitemap.xml

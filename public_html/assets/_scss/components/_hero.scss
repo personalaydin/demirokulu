@@ -1,0 +1,14 @@
+.hero {
+    position: relative;
+}
+
+.hero__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.hero__bg--contact {
+    height: calc(var(--headerTopHeight) + var(--headerBottomHeight) + 50%);
+}

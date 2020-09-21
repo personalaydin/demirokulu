@@ -1,0 +1,129 @@
+.content-text-first {
+    position: absolute;
+    top: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-left: 55px;
+    left: -20px;
+
+    @include media-breakpoint-down(xs) {
+        font-size: 16px;
+        top: 10px;
+        left: 0;
+    }
+
+    @include media-breakpoint-up(xs) {
+        font-size: 15px;
+        top: 25px;
+        left: -30px;
+    }
+
+    @include media-breakpoint-up(sm) {
+        font-size: 16px;
+        top: 40px;
+        left: 0;
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: 20px;
+        top: 50px;
+        left: 10px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 20px;
+        top: 35px;
+        left: 0;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        font-size: 26px;
+        top: 55px;
+        left: 15px;
+    }
+
+}
+
+.content-text-head {
+    font-weight: 700;
+    line-height: 40px;
+    padding: 0;
+    font-size: 30px;
+    margin: 5px 0;
+
+    @include media-breakpoint-down(md) {
+        font-size: 22px;
+
+    }
+
+    @media(max-width: 1100px) {
+        margin: 0 0 5px 0 !important;
+        line-height: 35px;
+    }
+
+    @media(max-width: 1350px) {
+        margin: 0 0 10px 0;
+    }
+
+    @media (max-width:1440px) {
+        margin: 0 0px 25px 0;
+    }
+
+    @media(min-width: 1920px) {
+        margin: 0 0 40px 0;
+    }
+
+}
+
+
+.d-mobil-block {
+    display: block !important;
+
+    @include media-breakpoint-down(md) {
+        display: none !important;
+
+    }
+
+}
+
+.d-none-mobil {
+    display: none;
+
+    @include media-breakpoint-down(md) {
+        display: block !important;
+
+    }
+
+}
+
+
+.d-flex-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 90px;
+}
+
+
+.left-image-position {
+    @media(max-width: 767px) {
+        padding: 20px 0 !important;
+    }
+
+    @media(max-width: 1441px) {
+        padding: 10px 20px 20px;
+    }
+
+    @media(min-width: 1920px) {
+        padding: 10px 10px 0;
+    }
+
+    @media(min-width: 2700px) {
+        padding: 45px 15px 0;
+    }
+}

@@ -1,0 +1,66 @@
+$min-height-widths: () !default;
+$min-height-widths: map-merge(
+    (
+        'auto': auto,
+        '31': 31px,
+        '35': 35px,
+        '39': 39px,
+        '40': 40px,
+        '41': 41px,
+        '45': 45px,
+        '51': 51px,
+        '61': 61px,
+        '70': 70px,
+        '80': 80px,
+        '81': 81px,
+        '82': 82px,
+        '83': 83px,
+        '84': 84px,
+        '85': 85px,
+        '86': 86px,
+        '94': 94px,
+        '100': 100px,
+        '105': 105px,
+        '120': 120px,
+
+        '155': 155px,
+        '164': 164px,
+        '180': 180px,
+        '200': 200px,
+        '235': 235px,
+        '250': 250px,
+        '270': 270px,
+        '280': 280px,
+        '320': 320px,
+        '350': 350px,
+        '360': 360px,
+        '380': 380px,
+        '400': 400px,
+        '410': 410px,
+        '420': 420px,
+        '430': 430px,
+        '455': 455px,
+        '500': 500px,
+        '600': 600px,
+        '660': 660px,
+        '750': 750px,
+        '755': 755px,
+    ),
+    $min-height-widths
+);
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        @each $key, $value in $min-height-widths {
+            .min-width#{$infix}-#{$key} {
+                min-width: $value !important;
+            }
+
+            .min-height#{$infix}-#{$key} {
+                min-height: $value !important;
+            }
+        }
+    }
+}

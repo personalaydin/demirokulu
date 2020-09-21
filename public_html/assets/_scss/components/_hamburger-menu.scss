@@ -1,0 +1,121 @@
+.hamburger {
+    height: 17px;
+}
+
+.hamburger-menu-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hamburger-menu {
+    position: fixed;
+    // top: var(--headerBottomHeight);
+    top: 90px;
+    left: 0;
+    width: 100%;
+    height: calc(var(--vh) * 100 - var(--headerBottomHeight));
+    z-index: 15;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+
+    .social-icon {
+        font-size: 25px;
+    }
+
+    .services__menu__item {
+        width: 50%;
+        min-height: 200px !important;
+        padding: 0 10px;
+        margin: 0;
+
+
+        @include media-breakpoint-up(sm) {
+            padding: 0 30px;
+        }
+    }
+
+    .services__menu__item__icon {
+
+        svg {
+            width: 48px;
+            height: 38px;
+        }
+    }
+
+    .accordion {
+
+        i {
+            transform: rotate(90deg);
+            transition: all .2s linear;
+        }
+
+        .collapsed {
+
+            i {
+                transform: rotate(0);
+            }
+        }
+    }
+}
+
+.hamburger-menu-bg-f8f8fb {
+    background-color: #f8f8fb !important;
+}
+
+.hamburger-menu--active {
+    background-image: url('../../img/hamburger-menu-bg-1.png');
+    background-color: #f8f8fb !important;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-position: top;
+    visibility: visible;
+    opacity: 1;
+}
+
+.hamburger-menu__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    max-height: 40px;
+    color: #ffffff;
+    margin-top: 20px;
+
+    &:hover {
+        color: $mainColor;
+    }
+
+    @include media-breakpoint-up(sm) {
+        max-height: 50px;
+    }
+}
+
+.hamburger-menu__lang-switcher {
+    $hamburgerW: 55px;
+    $hamburgerH: 40px;
+    width: $hamburgerW;
+    height: $hamburgerH;
+    background: rgba($mainColor, .3);
+
+    &.hamburger-menu__lang-switcher {
+        background: rgba($mainColor, .7);
+    }
+}
+
+
+.hamburger-box {
+    top: 55px !important;
+
+    @include media-breakpoint-up(sm) {
+        top: 65px !important;
+    }
+
+    @include media-breakpoint-down(md) {
+        top: 70px !important;
+    }
+
+
+
+}

@@ -1,0 +1,98 @@
+// Definitions
+@import 'definitions/settings';
+@import 'definitions/mixins';
+
+// bootstrap
+@import "~bootstrap/scss/bootstrap.scss";
+
+// @fortawesome/fontawesome-free
+$fa-font-path: '/node_modules/@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/brands.scss';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/v4-shims';
+
+// Animate
+$use-fadeIn: true;
+$use-fadeIn: true;
+$use-fadeInLeft: true;
+$use-fadeInRight: true;
+$use-fadeInDown: true;
+$use-fadeInUp: true;
+@import "~animate-sass/_animate.scss";
+
+// jonsuh/hamburgers
+@import '~hamburgers/_sass/hamburgers/hamburgers.scss';
+
+// kenwheeler/slick
+@import '~slick-carousel/slick/slick.scss';
+
+// Magnific Popup
+@import "~magnific-popup/src/css/main.scss";
+
+// Light Gallery
+@import '~lightgallery/src/sass/lg-variables';
+@import '~lightgallery/src/sass/lightgallery';
+
+// Utilities
+@import 'utilities/no-container';
+
+@import 'utilities/font-size';
+@import 'utilities/line-height';
+@import 'utilities/height-width';
+@import 'utilities/max-height-width';
+@import 'utilities/min-height-width';
+@import 'utilities/object-fit';
+@import 'utilities/opacity';
+@import 'utilities/placeholder';
+@import 'utilities/typography';
+@import 'utilities/white-space';
+@import 'utilities/_positions';
+@import 'utilities/_misc';
+@import 'utilities/_zindex';
+
+
+// Vendor
+@import 'vendor/bootstrap';
+@import 'vendor/slick';
+@import 'vendor/magnific-popup';
+
+// Base
+@import 'base/reset';
+@import 'base/general';
+
+// Components
+@import 'components/header';
+@import 'components/home';
+@import 'components/home-two';
+@import 'components/videos';
+@import 'components/hamburger-menu';
+@import 'components/hero';
+@import 'components/button';
+@import 'components/h-button';
+@import 'components/footer';
+@import 'components/circle';
+@import 'components/wrapper';
+@import 'components/main-slider';
+@import 'components/vertical-divider';
+@import 'components/horizontal-divider';
+@import 'components/corporate';
+@import 'components/products';
+@import 'components/offices';
+@import 'components/video-slider';
+@import 'components/news-slider';
+@import 'components/blog-call-to-action';
+@import 'components/comments-slider';
+@import 'components/excerpt';
+@import 'components/icon';
+@import 'components/scale';
+@import 'components/tab-menu';
+@import 'components/box';
+@import 'components/reference';
+@import 'components/team-slider';
+@import 'components/datacosmos';
+@import 'components/sukrozomiyal';
+@import 'components/katkida-bulunanlar';
+@import 'components/contact';
+@import 'components/popup';

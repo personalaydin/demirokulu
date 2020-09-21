@@ -1,0 +1,68 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        .scale#{$infix}-1 {
+            transform: scale(1);
+        }
+
+        .scale#{$infix}-9 {
+            transform: scale(.9);
+        }
+
+        .scale#{$infix}-8 {
+            transform: scale(.8);
+        }
+
+        .scale#{$infix}-7 {
+            transform: scale(.7);
+        }
+
+        .scale#{$infix}-6 {
+            transform: scale(.6);
+        }
+
+        .scale#{$infix}-5 {
+            transform: scale(.5);
+        }
+
+        .scale#{$infix}-4 {
+            transform: scale(.4);
+        }
+    }
+}
+
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        .zoom#{$infix}-1 {
+            zoom: 1; 
+        }
+
+        .zoom#{$infix}-9 {
+            zoom: .9; 
+        }
+
+        .zoom#{$infix}-8 {
+            zoom: .8; 
+        }
+
+        .zoom#{$infix}-7 {
+            zoom: .7; 
+        }
+
+        .zoom#{$infix}-6 {
+            zoom: .6; 
+        }
+
+        .zoom#{$infix}-5 {
+            zoom: .5;        
+        }
+
+        .zoom#{$infix}-4 {
+            zoom: .4;
+        }
+    }
+}

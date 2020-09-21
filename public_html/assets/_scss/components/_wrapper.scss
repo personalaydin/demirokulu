@@ -1,0 +1,76 @@
+:root {
+    --wrapperOffset: #{map_get($wrapper-offset, xs)};
+
+    @include media-breakpoint-up(sm) {
+        --wrapperOffset: #{map_get($wrapper-offset, sm)};
+    }
+
+    @include media-breakpoint-up(md) {
+        --wrapperOffset: #{map_get($wrapper-offset, md)};
+    }
+
+    @include media-breakpoint-up(lg) {
+        --wrapperOffset: #{map_get($wrapper-offset, lg)};
+    }
+
+    @include media-breakpoint-up(xl) {
+        --wrapperOffset: #{map_get($wrapper-offset, xl)};
+    }
+
+    @include media-breakpoint-up(xxl) {
+        --wrapperOffset: #{map_get($wrapper-offset, xxl)};
+    }
+
+    @include media-breakpoint-up(xxxl) {
+        --wrapperOffset: #{map_get($wrapper-offset, xxxl)};
+    }
+
+    @include media-breakpoint-up(xxxxl) {
+        --wrapperOffset: #{map_get($wrapper-offset, xxxxl)};
+    }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        .wrapper-left#{$infix} {
+            padding-left: var(--wrapperOffset);
+        }
+
+        .wrapper-left#{$infix}-2x {
+            padding-left: calc(var(--wrapperOffset) * 2);
+        }
+
+        .wrapper-left#{$infix}-3x {
+            padding-left: calc(var(--wrapperOffset) * 3);
+        }
+
+        .wrapper-right#{$infix} {
+            padding-right: var(--wrapperOffset);
+        }
+
+        .wrapper-right#{$infix}-2x {
+            padding-right: calc(var(--wrapperOffset) * 2);
+        }
+
+        .wrapper-right#{$infix}-3x {
+            padding-right: calc(var(--wrapperOffset) * 3);
+        }
+
+        .wrapper-both#{$infix} {
+            padding-left: var(--wrapperOffset);
+            padding-right: var(--wrapperOffset);
+        }
+
+        .wrapper-both#{$infix}-2x {
+            padding-left: calc(var(--wrapperOffset) * 2);
+            padding-right: calc(var(--wrapperOffset) * 2);
+        }
+
+        .wrapper-both#{$infix}-3x {
+            padding-left: calc(var(--wrapperOffset) * 3);
+            padding-right: calc(var(--wrapperOffset) * 3);
+        }
+    }
+}

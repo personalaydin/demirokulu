@@ -1,0 +1,109 @@
+#popup {
+  display: inline-block;
+  position: fixed;
+  top: 19%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $bgColor2;
+  box-shadow: 1px 1px .5em 0 rgba(0, 0, 0, .5);
+  transition: opacity .3s ease-in-out;
+
+  @media(max-width:700px) {
+    left: 45%;
+  }
+
+  .popup-wrapper {
+    width: 100%;
+    max-width: 650px;
+
+    .popup-content {
+      align-items: center;
+      justify-content: center;
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+
+      @media(max-width:700px) {
+        width: 120%;
+      }
+
+      .popup-text {
+        font-size: 24px;
+        font-weight: 700;
+        color: #010101;
+        text-align: center;
+        padding: 110px 20px 50px 20px;
+
+        @include media-breakpoint-down(md) {
+          padding: 70px 20px 50px 20px;
+          font-size: 17px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          padding: 20px 10px 5px 10px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+#popup.hidden {
+  display: none;
+}
+
+#popup.fade-in {
+  opacity: 1;
+}
+
+
+
+#popupDeleteUser {
+  display: inline-block;
+  position: fixed;
+  top: 26%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $bgColor2;
+  box-shadow: 1px 1px .5em 0 rgba(0, 0, 0, .5);
+  transition: opacity .3s ease-in-out;
+
+  .popup-wrapper {
+    width: 100%;
+    max-width: 650px;
+
+    .popup-content {
+      align-items: center;
+      justify-content: center;
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+
+      .popup-text {
+        font-size: 24px;
+        font-weight: 700;
+        color: #010101;
+        text-align: center;
+        padding: 40px 20px 0px 20px;
+
+        @include media-breakpoint-down(md) {
+          padding: 70px 20px 50px 20px;
+          font-size: 17px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          padding: 20px 10px 5px 10px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+#popupDeleteUser.hidden {
+  display: none;
+}
+
+#popupDeleteUser.fade-in {
+  opacity: 1;
+}
