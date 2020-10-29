@@ -1,11 +1,3 @@
-// $(document).ready(function() {  
-//     $('#cookieModal').modal('show');
-//     $("#closeButton").click(function(){
-//       $("#cookieModal").hide();
-//     });
-//   });
-
-
 $(document).ready(function () {
 
 
@@ -27,27 +19,6 @@ $(document).ready(function () {
 
 
 
-// window.onload = function () {
-
-//   var popup = document.getElementById("popup");
-
-//   popup.classList.remove("hidden");
-
-//   setTimeout(() => popup.classList.add("fade-in"));
-
-//   document.getElementById("selectCity").onchange = function () {
-
-//     popup.classList.remove("fade-in");
-
-//     setTimeout(() => popup.classList.add("hidden"), 300);
-//   };
-//   // if (sessionStorage.getItem('dontLoad') == null) {
-//   //   alert("This message will be shown only once when we use this window.")
-//   //   sessionStorage.setItem('dontLoad', 'true');
-//   // }
-// };
-
-
 
 
 
@@ -55,56 +26,60 @@ $(document).ready(function () {
 $(document).ready(function () {
 
 
-  $(".show-more-1").click(function () {
-    if ($(".text-1").hasClass("show-more-1-height")) {
-      $(this).text("Daha Az Göster");
-    } else {
-      $(this).text("Devamı için");
-    }
-    $(".dot-1").toggle();
-    $(".text-1").toggleClass("show-more-1-height");
-    $(this).siblings('.additional-content').toggle();
-
-  });
+  // $(".show-more-1").click(function () {
+  //   $('.first-line-text').hide('.first-line-text');
+  //   if ($(".text-1").hasClass("show-more-1-height")) {
+  //     $(this).text("Daha Az Göster");
+  //   } else {
+  //     $(this).text("Devamı için");
+  //   }
 
 
-  $(".show-more-2").click(function () {
-    if ($(".text-2").hasClass("show-more-2-height")) {
-      $(this).text("Daha Az Göster");
-    } else {
-      $(this).text("Devamı için");
-    }
-    $(".dot-2").toggle();
-    $(".text-2").toggleClass("show-more-2-height");
-    $(this).siblings('.additional-content').toggle();
+  //   $(".dot-1").toggle();
+  //   $(".text-1").toggleClass("show-more-1-height");
+  //   $(this).siblings('.additional-content').toggle();
 
-  });
+  // });
 
 
-  $(".show-more-3").click(function () {
-    if ($(".text-3").hasClass("show-more-3-height")) {
-      $(this).text("Daha Az Göster");
-    } else {
-      $(this).text("Devamı için");
-    }
-    $(".dot-3").toggle();
-    $(".text-3").toggleClass("show-more-3-height");
-    $(this).siblings('.additional-content').toggle();
+  // $(".show-more-2").click(function () {
+  //   if ($(".text-2").hasClass("show-more-2-height")) {
+  //     $(this).text("Daha Az Göster");
+  //   } else {
+  //     $(this).text("Devamı için");
+  //   }
 
-  });
+  //   $(".dot-2").toggle();
+  //   $(".text-2").toggleClass("show-more-2-height");
+  //   $(this).siblings('.additional-content').toggle();
+
+  // });
 
 
-  $(".show-more-4").click(function () {
-    if ($(".text-4").hasClass("show-more-4-height")) {
-      $(this).text("Daha Az Göster");
-    } else {
-      $(this).text("Devamı için");
-    }
-    $(".dot-4").toggle();
-    $(".text-4").toggleClass("show-more-4-height");
-    $(this).siblings('.additional-content').toggle();
+  // $(".show-more-3").click(function () {
+  //   if ($(".text-3").hasClass("show-more-3-height")) {
+  //     $(this).text("Daha Az Göster");
+  //   } else {
+  //     $(this).text("Devamı için");
+  //   }
+  //   $(".dot-3").toggle();
+  //   $(".text-3").toggleClass("show-more-3-height");
+  //   $(this).siblings('.additional-content').toggle();
 
-  });
+  // });
+
+
+  // $(".show-more-4").click(function () {
+  //   if ($(".text-4").hasClass("show-more-4-height")) {
+  //     $(this).text("Daha Az Göster");
+  //   } else {
+  //     $(this).text("Devamı için");
+  //   }
+  //   $(".dot-4").toggle();
+  //   $(".text-4").toggleClass("show-more-4-height");
+  //   $(this).siblings('.additional-content').toggle();
+
+  // });
 
 
 
@@ -200,3 +175,31 @@ $(document).ready(function () {
 
   $(".numberinput").forceNumeric();
 });
+
+
+$(function () {
+  $('.show-less-div').myOwnLineShowMoreLess({
+    showLessLine: 3,
+    fade: true
+  });
+})
+
+$(function () {
+  $('.show-less-div').myOwnLineShowMoreLess({
+    showLessText: 'Read Less',
+    showMoreText: 'Read More',
+    fade: true
+  });
+})
+
+$(function () {
+  $('.show-less-div').myOwnLineShowMoreLess({
+    lessAtInitial: false
+  });
+})
+
+$(function () {
+  $('.show-less-div').myOwnLineShowMoreLess({
+    showLessAfterMore: false
+  });
+})

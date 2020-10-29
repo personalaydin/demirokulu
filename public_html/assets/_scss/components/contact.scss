@@ -9,7 +9,7 @@ $gray: #9b9b9b;
   margin-top: 10px;
   width: 75%;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     width: 90%;
   }
 }
@@ -30,14 +30,16 @@ $gray: #9b9b9b;
     color: transparent;
   }
 
-  &:placeholder-shown~.form__label {
+  &:placeholder-shown ~ .form__label {
     font-size: 14px;
     cursor: text;
     top: 40px;
+    @media (max-width: 767px) {
+      font-size: 11px;
+      top: 30px;
+    }
   }
 }
-
-
 
 .form__label {
   position: absolute;
@@ -49,7 +51,7 @@ $gray: #9b9b9b;
 }
 
 .form__field:focus {
-  ~.form__label {
+  ~ .form__label {
     position: absolute;
     top: 0;
     display: block;
@@ -68,7 +70,6 @@ $gray: #9b9b9b;
 
 /* reset input */
 .form__field {
-
   &:required,
   &:invalid {
     box-shadow: none;
@@ -77,14 +78,10 @@ $gray: #9b9b9b;
 
 /* demo */
 
-
 .form-control:focus {
   background-color: #fff !important;
   box-shadow: none !important;
   border-color: #fff !important;
-
-
-
 }
 
 .form-container {
@@ -99,11 +96,8 @@ $gray: #9b9b9b;
   padding-right: 5%;
 
   @include media-breakpoint-down(lg) {
-
     padding-right: 5%;
   }
-
-
 }
 
 .map-icon {

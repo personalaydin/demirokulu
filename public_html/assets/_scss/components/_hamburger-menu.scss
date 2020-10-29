@@ -19,40 +19,30 @@
     visibility: hidden;
     opacity: 0;
     transition: all .3s;
-
     .social-icon {
         font-size: 25px;
     }
-
     .services__menu__item {
         width: 50%;
         min-height: 200px !important;
         padding: 0 10px;
         margin: 0;
-
-
         @include media-breakpoint-up(sm) {
             padding: 0 30px;
         }
     }
-
     .services__menu__item__icon {
-
         svg {
             width: 48px;
             height: 38px;
         }
     }
-
     .accordion {
-
         i {
             transform: rotate(90deg);
             transition: all .2s linear;
         }
-
         .collapsed {
-
             i {
                 transform: rotate(0);
             }
@@ -69,7 +59,7 @@
     background-color: #f8f8fb !important;
     background-position-y: top;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: right;
     visibility: visible;
     opacity: 1;
 }
@@ -82,11 +72,9 @@
     max-height: 40px;
     color: #ffffff;
     margin-top: 20px;
-
     &:hover {
         color: $mainColor;
     }
-
     @include media-breakpoint-up(sm) {
         max-height: 50px;
     }
@@ -98,24 +86,17 @@
     width: $hamburgerW;
     height: $hamburgerH;
     background: rgba($mainColor, .3);
-
     &.hamburger-menu__lang-switcher {
         background: rgba($mainColor, .7);
     }
 }
 
-
 .hamburger-box {
     top: 55px !important;
-
     @include media-breakpoint-up(sm) {
         top: 65px !important;
     }
-
     @include media-breakpoint-down(md) {
         top: 70px !important;
     }
-
-
-
 }

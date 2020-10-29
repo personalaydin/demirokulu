@@ -16,7 +16,6 @@
     }
 }
 
-
 .header-wrapper {
     position: fixed;
     top: 0;
@@ -29,12 +28,10 @@
 
         @include media-breakpoint-down(lg) {
             background: #fff;
-            box-shadow: 0 1px 3px 0 rgba(#000, .1);
+            box-shadow: 0 1px 3px 0 rgba(#000, 0.1);
         }
     }
 }
-
-
 
 .header {
     &.header--shrink {
@@ -55,15 +52,17 @@
 
         @include media-breakpoint-down(md) {
             height: 85px;
+        }
 
+        @media (max-width: 1256px) {
+            height: 95px !important;
         }
     }
 }
 
-
 .header__bottom {
     height: var(--headerBottomHeight);
-    transition: all .3s;
+    transition: all 0.3s;
 
     .header--shrink & {
         --headerBottomHeight: #{map_get($header-bottom-shrink-height, sm)};
@@ -84,10 +83,14 @@
             margin-top: 50px;
             margin-bottom: -13px;
             transition: width 0.3s, height 0.3s;
-            background-image: url('../../img/logo.png');
+            background-image: url("../../img/logo.png");
             background-size: contain;
             background-position: inherit;
             background-repeat: no-repeat;
+
+            @media (max-width: 1300px) {
+                width: 150px !important;
+            }
 
             @include media-breakpoint-down(md) {
                 margin-top: 140px;
@@ -101,7 +104,7 @@
                 height: auto;
                 margin-top: 0px;
                 margin-bottom: -30px;
-                transition: width .3s, height .3s;
+                transition: width 0.3s, height 0.3s;
                 background-size: contain;
                 background-position: inherit;
                 background-repeat: no-repeat;
@@ -126,14 +129,12 @@
                     margin-left: auto;
                     margin-right: auto;
                     display: block;
-
                 }
             }
         }
     }
 
     .header__bottom__menu {
-
         .header--shrink & {
             margin-top: -30px !important;
             margin-right: 0px !important;
@@ -142,7 +143,7 @@
         .header__bottom__menu__item {
             color: #fff;
             padding: 5px;
-            transition: color .3s;
+            transition: color 0.3s;
 
             @include media-breakpoint-up(xl) {
                 padding: 0 5px;
@@ -153,9 +154,8 @@
             }
 
             i {
-
                 &:before {
-                    content: '\f078';
+                    content: "\f078";
                     font-family: "Font Awesome 5 Free";
                     font-style: normal;
                 }
@@ -170,11 +170,9 @@
             }
 
             &.header__bottom__menu__item--active {
-
                 i {
-
                     &:before {
-                        content: '\f077';
+                        content: "\f077";
                         font-family: "Font Awesome 5 Free";
                         font-style: normal;
                     }
@@ -213,11 +211,8 @@
     i {
         &.hover {
             color: $bgColor2;
-
         }
     }
-
-
 }
 
 .relative {
@@ -233,8 +228,6 @@
     @include media-breakpoint-down(md) {
         top: 70px;
     }
-
-
 }
 
 .lang_style_focused {
@@ -244,26 +237,22 @@
     padding: 5px 10px;
 }
 
-
 .p-sm {
-
-    @media (max-width:991px) {
+    @media (max-width: 991px) {
         padding: 0 !important;
     }
-
 }
 
 .hidden {
-    @media (max-width:991px) {
+    @media (max-width: 991px) {
         display: none !important;
     }
 }
 
 .d-block {
-    @media (max-width:991px) {
+    @media (max-width: 991px) {
         display: inline-block !important;
     }
-
 }
 
 .home-arrow-icon {
@@ -274,12 +263,10 @@
     max-width: 15%;
     top: 75px;
 
-    @media (max-width:767px) {
+    @media (max-width: 767px) {
         display: none !important;
     }
-
 }
-
 
 .d-block-shrink {
     display: none !important;
@@ -298,7 +285,6 @@
     }
 }
 
-
 .header__top__lang-switcher {
     .header--shrink & {
         margin-top: 0px !important;
@@ -312,7 +298,6 @@
     .header--shrink & {
         color: $mainColor !important;
     }
-
 }
 
 .hamburger-inner,
@@ -332,9 +317,8 @@
     }
 }
 
-
 .health-p {
-    @media (max-width:320px) {
+    @media (max-width: 320px) {
         display: none !important;
     }
 }

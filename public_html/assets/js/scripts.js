@@ -20,12 +20,17 @@ import './include/tab-menu';
 import './include/test';
 import './include/cre-animate';
 import './include/jquery.mask';
+import './include/showmoreless';
+
+
 
 
 $(function () {
   $('.scroll').on('click', function (e) {
     e.preventDefault();
-    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - 140 }, 500, 'linear');
+    $('html, body').animate({
+      scrollTop: $($(this).attr('href')).offset().top - 140
+    }, 500, 'linear');
   });
 });
 
@@ -78,21 +83,36 @@ $(document).ready(function () {
   $('.phone_with_ddd').mask('(00) 0000-0000');
   $('.phone_us').mask('(000) 000-0000');
   $('.mixed').mask('AAA 000-S0S');
-  $('.cpf').mask('000.000.000-00', { reverse: true });
-  $('.cnpj').mask('00.000.000/0000-00', { reverse: true });
-  $('.money').mask('000.000.000.000.000,00', { reverse: true });
-  $('.money2').mask("#.##0,00", { reverse: true });
+  $('.cpf').mask('000.000.000-00', {
+    reverse: true
+  });
+  $('.cnpj').mask('00.000.000/0000-00', {
+    reverse: true
+  });
+  $('.money').mask('000.000.000.000.000,00', {
+    reverse: true
+  });
+  $('.money2').mask("#.##0,00", {
+    reverse: true
+  });
   $('.ip_address').mask('0ZZ.0ZZ.0ZZ.0ZZ', {
     translation: {
       'Z': {
-        pattern: /[0-9]/, optional: true
+        pattern: /[0-9]/,
+        optional: true
       }
     }
   });
   $('.ip_address').mask('099.099.099.099');
-  $('.percent').mask('##0,00%', { reverse: true });
-  $('.clear-if-not-match').mask("00/00/0000", { clearIfNotMatch: true });
-  $('.placeholder').mask("00/00/0000", { placeholder: "__/__/____" });
+  $('.percent').mask('##0,00%', {
+    reverse: true
+  });
+  $('.clear-if-not-match').mask("00/00/0000", {
+    clearIfNotMatch: true
+  });
+  $('.placeholder').mask("00/00/0000", {
+    placeholder: "__/__/____"
+  });
   $('.fallback').mask("00r00r0000", {
     translation: {
       'r': {
@@ -102,76 +122,77 @@ $(document).ready(function () {
       placeholder: "__/__/____"
     }
   });
-  $('.selectonfocus').mask("00/00/0000", { selectOnFocus: true });
+  $('.selectonfocus').mask("00/00/0000", {
+    selectOnFocus: true
+  });
 });
 
-$( "#popupDeleteUser" ).hide();
+$("#popupDeleteUser").hide();
 
-$( "#userDeleteButtonD" ).click(function() {
-  $( "#popupDeleteUser" ).show();
+$("#userDeleteButtonD").click(function () {
+  $("#popupDeleteUser").show();
 });
-$( "#userDeleteButtonM" ).click(function() {
-  $( "#popupDeleteUser" ).show();
+$("#userDeleteButtonM").click(function () {
+  $("#popupDeleteUser").show();
 });
-$( "#userDeleteButtonCancel" ).click(function() {
-  $( "#popupDeleteUser" ).hide();
+$("#userDeleteButtonCancel").click(function () {
+  $("#popupDeleteUser").hide();
 });
 
-$( "#userDeleteButtonAccept" ).click(function() {
-  
+$("#userDeleteButtonAccept").click(function () {
+
   var data = {
     "_token": $('#token').val()
   };
 
   $.ajax({
-    url: "ajax/deleteUser/"+$('#userID').val(),
+    url: "ajax/deleteUser/" + $('#userID').val(),
     type: "post",
-    data: data ,
+    data: data,
     success: function (response) {
       location.reload();
 
     },
-    error: function(jqXHR, textStatus, errorThrown) {
+    error: function (jqXHR, textStatus, errorThrown) {
       console.log(textStatus, errorThrown);
     }
   });
 
-}); 
+});
 
 
 var isMobile = {
-  Android: function() {
-      return navigator.userAgent.match(/Android/i);
+  Android: function () {
+    return navigator.userAgent.match(/Android/i);
   },
-  BlackBerry: function() {
-      return navigator.userAgent.match(/BlackBerry/i);
+  BlackBerry: function () {
+    return navigator.userAgent.match(/BlackBerry/i);
   },
-  iOS: function() {
-      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+  iOS: function () {
+    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
   },
-  Opera: function() {
-      return navigator.userAgent.match(/Opera Mini/i);
+  Opera: function () {
+    return navigator.userAgent.match(/Opera Mini/i);
   },
-  Windows: function() {
-      return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+  Windows: function () {
+    return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
   },
-  any: function() {
-      return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+  any: function () {
+    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
   }
-  };
+};
 
-  var is_root = location.pathname == "/"; 
-  var url = window.location.search;
+var is_root = location.pathname == "/";
+var url = window.location.search;
 
 
-  if( isMobile.any() ) {
-    if (url.match("scroll").length > 0) {
-      $([document.documentElement, document.body]).animate({
-        scrollTop: $("#elementtoScrollToID").offset().top-30
-        // scrollTop: $("#elementtoScrollToID").scrollTop() + 430  
+if (isMobile.any()) {
+  if (url.match("scroll").length > 0) {
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#elementtoScrollToID").offset().top - 30
+      // scrollTop: $("#elementtoScrollToID").scrollTop() + 430  
 
     }, 2000);
   }
 
 }
-
